@@ -1,0 +1,130 @@
+
+*{ 
+    font-family: 'Signika Negative', sans-serif;
+}
+body{
+    margin: 30px;
+    height: 110vh;
+    background-color: hsl(210deg 46% 95%);
+}
+img{
+    border-radius: 50%;
+    display: inline;
+    width: 40px;
+    height: 40px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(9 , 1fr);
+    grid-template-rows: repeat(4 , auto);
+    gap: 20px;
+}
+.purple{
+    background-color: rgb(115 63 200);
+    background-image: url(/testimonials-grid-section-main/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 82% 0%;
+    background-size: 130px;
+}
+.padding{
+    padding: 30px;
+}
+.raduis{
+    border-radius:10px ;
+}
+.purple,
+.black{
+    grid-row:span 2;
+    grid-column:span 5;
+}
+h5{
+    display: inline;
+    position: relative;
+    top: -27px;
+    left: 25px;
+    font-weight: 400;
+    font-size: 15px;
+}
+.purple,
+.gray,
+.black{
+    color: white;
+}
+.carere{
+    font-size: 14px;
+    color:  rgb(207 202 202);
+}
+.purple>.name::after{
+    content: "Verified Graduate";
+    position: relative;
+    left: -94px;
+    top: 20px;
+    font-size: 13px;
+    color: rgb(207 202 202);
+}
+p{
+    font-size: 24px;
+    margin-top: 14px;
+}
+.purple img{
+    border: rgb(166 115 242) 3px solid;
+}
+.gray{
+    background-color: rgb(73 85 107);
+}
+.gray,
+.s-white{
+    grid-row: span 2;
+    grid-column: span 2;
+}
+.ss{
+    display: inline-block;
+}
+.specialty{
+    position: relative;
+    left: 68px;
+    top: -23px;
+    font-size: 13px;
+    color: rgb(207 202 202);
+}
+.white{
+    background-color: white;
+    grid-row:span 4;
+    grid-column: span 2;
+}
+.s-white{
+    background-color: white;
+}
+.black{
+    background-color: rgb(24 32 45);
+}
+.black>img{
+    border: solid 3px hsl(260deg 46% 38%);
+}
+@media screen and (max-width:1000px){
+    .container{
+        grid-template-columns: repeat(2 , 1fr) ;
+        grid-template-rows: repeat(12 , auto);
+    }
+    .purple,
+    .gray,
+    .s-white,
+    .white,
+    .black{
+        grid-row: span 8;
+        grid-column: span 2;
+    }
+    .purple{
+        grid-row: span 4;
+    }
+    .white{
+        grid-row: span 3;
+    }
+    .gray,
+    .s-white{
+        grid-row:span 2 ;
+    }
+    .black{
+        grid-row:span 3 ;
+    }
+}
